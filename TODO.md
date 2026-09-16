@@ -23,8 +23,11 @@ assessment split, the "frame" decision).
       reference (sessions already pointed at these slugs)
 - [x] People: text-only bios, remove placeholder photos
 - [x] Policies page + home page "How to read this course" frame section
-- [ ] Voice pass: lectures/sessions/assessments/people index pages, 404,
-      site-config alt text, index.astro heroImageAlt
+- [x] Voice pass: lectures/sessions/assessments/people index pages, 404,
+      site-config alt text, index.astro heroImageAlt -- people/404/
+      site-config were already real copy from earlier commits;
+      index.astro heroImageAlt deferred to the artwork step below since
+      it describes specific imagery that doesn't exist yet
 - [ ] Artwork: generate hero-home.avif (2560x1086) + card.png (1200x630)
       via SVG->sharp script
 - [ ] Final pnpm check + pnpm check:evidence pass
