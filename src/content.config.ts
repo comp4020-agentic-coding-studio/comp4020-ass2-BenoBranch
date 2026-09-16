@@ -55,6 +55,14 @@ export const collections = {
       .loose(),
   }),
 
+  // Every lecture is a deprecation notice: the same four-part shape every
+  // week (sunset rationale in the page body; pitch, breaking changes and
+  // rollback plan below), so a week can't ship half-audited. `pitch` and
+  // `migrationPath` are written in the notice's own confident register;
+  // `breakingChanges` is always plain -- see CLAUDE.md's voice-boundary
+  // rule. Enforced here, at build time, rather than as a spec/ test: a
+  // missing field fails the build immediately instead of only at
+  // check:evidence time.
   lectures: defineCollection({
     loader: courseNodeLoader("lectures"),
     schema: courseNodeSchema
@@ -66,6 +74,14 @@ export const collections = {
           .string()
           .regex(/^\/decks\/[a-z0-9-]+\/$/)
           .optional(),
+        industry: z.string().trim().min(1),
+        pitch: z.string().trim().min(80),
+        migrationPath: z.string().trim().min(40),
+        breakingChanges: z.object({
+          economic: z.string().trim().min(80),
+          functional: z.string().trim().min(80),
+        }),
+        rollbackPlan: z.string().trim().min(40),
       })
       .loose(),
   }),
