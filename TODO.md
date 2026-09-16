@@ -30,7 +30,6 @@ assessment split, the "frame" decision).
       it describes specific imagery that doesn't exist yet
 - [x] Artwork: generate hero-home.avif (2560x1086) + card.png (1200x630)
       via SVG->sharp script
-- [ ] Final pnpm check + pnpm check:evidence pass -- evidence gate now only
-      fails on PROCESS.md, which is the one remaining item
-- [ ] PROCESS.md: write the 400-600 word account, cite real commit hashes,
-      remove the TEMPLATE: comment
+- [x] PROCESS.md: write the 400-600 word account, cite real commit hashes,
+      remove the TEMPLATE: comment (450 words, 6 commit citations)
+- [x] Final pnpm check + pnpm check:evidence pass -- both fully green
