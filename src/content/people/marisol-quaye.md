@@ -1,21 +1,29 @@
 ---
 title: Marisol Quaye
 description:
-  The founding convenor, responsible for the course's shape and its weekly
-  teaching programme.
+  The founding convenor, responsible for the course's shape, its industry
+  arc, and which claims in each week's notice have to hold up
 affiliation: Slop University School of Invented Disciplines
 role: convenor
 email: marisol.quaye@slop.university
 contact: Email for course-level questions; use the weekly session for feedback on work.
-photo: ./marisol-quaye.avif
-photoAlt: A stylised portrait of a person in three-quarter view, flat gold and black shapes on warm cream, in a two-ink risograph print
 ---
 
-<!-- STARTER_CONTENT: replace this person entry, then remove this comment. -->
+Spent a decade auditing automation vendor claims for regulators before
+moving to teaching --- the job was reading pitch decks for a living and
+learning which sentences to trust. Designed this course's four-part notice
+form directly from that habit: read the pitch on its own terms first, then
+check it against what the vendor's own numbers actually support.
 
-Replace this entry. A people page carries a short bio and whatever a student
-needs in order to contact the right person for the right thing --- and nothing
-that will be stale by week 3.
+Convenes weeks 1, 3, 5, 7, 10 and 12, and signs off on every week's
+breaking-changes section before it's published --- the plain half of each
+notice is checked by a person, not generated alongside the pitch.
 
-Consultation hours, contact preferences and the escalation path (who to ask
-first, who to ask when that does not work) are the parts students actually read.
+## Getting help
+
+Office hours are posted at the start of each session and held right after
+it, so the notice you just read is still fresh. Email is for anything that
+can wait a week; if it can't, say so in the subject line and it'll get
+looked at sooner. For a mark you want reviewed, ask in session first --- it's
+faster than email and the marking criteria are usually easier to talk
+through out loud than in writing.
