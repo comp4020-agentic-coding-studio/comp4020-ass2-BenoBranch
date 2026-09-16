@@ -1,48 +1,97 @@
 ---
-title: Opening lecture
-description: The placeholder deck — replace it with a real deck for your course
----
-
-# Opening lecture
-
-{/* STARTER_CONTENT: replace this deck, then remove this comment. */}
-
-Replace this deck. It is here to show that slides are part of the site, built
-from the same markdown as everything else.
-
----
-
-## Slides are markdown
-
-A `---` starts a new slide. Everything else is ordinary markdown: headings,
-lists, links, tables, images, fenced code.
-
-- one idea per slide
-- the fewest words that carry it
-- the deck is a performance artefact, so it can say things a page wouldn't
-
+title: "Notice 01: Directory Assistance"
+description: The worked example — an industry already fully automated, walked through live
 ---
 
 {/* _class: impact */}
 
-# A slide class
+# Deprecation Notice 01
 
-`{/* _class: impact */}` fills the slide with the brand colour. `quote`,
-`banner` and `centered` are the others the theme styles.
+## Directory Assistance
 
 ---
 
-## What else is here
+## Before the recognizer existed
+
+Every listed number in a phone company's territory, held in a switchboard
+operator's head or a card index at her elbow. You dialled 411, said a name
+half-remembered, and a person negotiated the gap between what you said and
+what was listed.
+
+That negotiation is the whole job. It's also exactly the part a lookup table
+can't do.
+
+---
+
+{/* _class: quote */}
+
+> "The Bell System operator ... could locate almost any listing from the
+> vaguest of clues." — from a 1970s internal Bell training manual
+
+---
+
+## The pitch, as it was actually made
+
+- speech recognition + a structured database beats a human on cost, latency,
+  and consistency, full stop
+- the marginal call costs a fraction of a cent instead of an operator's wage
+- zero hold time, zero shift roster, zero attrition
+
+Read that again. Every sentence is true. That's what makes this week's case
+useful — the pitch doesn't need exaggerating to sound compelling.
+
+---
+
+## What the pitch left out
+
+- ~100,000 operator jobs in North America at the peak, collapsed to near zero
+- almost none of that headcount moved sideways into telecom — it stopped
+  existing
+- the workforce was disproportionately women, for whom this was one of the
+  few stable office-adjacent careers open at the time
+
+---
+
+{/* _class: banner */}
+
+## The messy 20%
+
+Misheard names. Recently changed numbers. A business known by a nickname
+instead of its listed name. A caller who didn't know the exact thing they
+were asking for and needed a human to ask a clarifying question back.
+
+The recognizer doesn't fail loudly on these. It just stops serving them.
+
+---
+
+## Rollback plan: none
+
+Not "difficult." Not "expensive." The training pipeline, the workforce, and
+the exchange infrastructure that supported it were fully decommissioned.
+There is no paused system to restart — the occupation would have to be
+rebuilt from zero.
+
+This is what an honest rollback plan looks like when the honest answer is no.
+
+---
+
+{/* _class: centered */}
+
+## The four parts, every week
+
+1. **Pitch** — the sales case, in its own voice
+2. **Migration path** — how it's actually implemented
+3. **Breaking changes** — economic and functional, always plain
+4. **Rollback plan** — what reversing it would really take
+
+Same shape, different industry, all twelve weeks.
+
+---
 
 ```sh
 pnpm dev
 pnpm check
 ```
 
-The second command proves the deck compiles with the rest of the site. Use the
-first to inspect every slide at the desktop and phone marking viewports; slide
-fit and legibility are visual judgements.
-
-The [astromotion](https://github.com/ANUcybernetics/astromotion) README has the
-rest of the syntax: speaker notes, backgrounds, QR codes, fragments, and
-components hydrated per slide.
+Full notice text is on the lecture page — this deck is the walkthrough, the
+page is the record.
