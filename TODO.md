@@ -6,10 +6,10 @@ assessment split, the "frame" decision).
 
 - [x] course-config.ts + site-config.ts: identity, SLOP4632, dates, tags,
       sessionLabels -> Audits
-- [ ] content.config.ts: extend lectures schema with industry/pitch/
+- [x] content.config.ts: extend lectures schema with industry/pitch/
       breakingChanges/rollbackPlan; spec/course-coherence.test.ts (weights
       sum to 100, weeks 1-12 present once, industry unique, >=1 deck)
-- [ ] CLAUDE.md: voice-boundary rule, structural-escalation rule,
+- [x] CLAUDE.md: voice-boundary rule, structural-escalation rule,
       no-fabricated-photography rule, spec-as-decided rule
 - [ ] Vertical slice: Week 1 (lecture+audit+real deck) and Week 9
       (lecture+audit) fully built and pnpm check green
