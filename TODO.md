@@ -21,8 +21,8 @@ assessment split, the "frame" decision).
       sunset-review-board (45) -- also forced earlier than planned, since the
       course-graph integration hard-fails the build on a dangling `related`
       reference (sessions already pointed at these slugs)
-- [ ] People: text-only bios, remove placeholder photos
-- [ ] Policies page + home page "How to read this course" frame section
+- [x] People: text-only bios, remove placeholder photos
+- [x] Policies page + home page "How to read this course" frame section
 - [ ] Voice pass: lectures/sessions/assessments/people index pages, 404,
       site-config alt text, index.astro heroImageAlt
 - [ ] Artwork: generate hero-home.avif (2560x1086) + card.png (1200x630)

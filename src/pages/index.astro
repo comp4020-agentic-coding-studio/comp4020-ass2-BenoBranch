@@ -2,6 +2,7 @@
 import Card from "astro-theme-university/components/Card.astro";
 import CardGrid from "astro-theme-university/components/CardGrid.astro";
 import ContentLayout from "astro-theme-university/layouts/ContentLayout.astro";
+import { withBase } from "astro-theme-university/url";
 import heroImage from "../assets/images/hero-home.avif";
 import { courseMeta } from "../course-config";
 import { sessionLabels, siteConfig } from "../site-config";
@@ -21,17 +22,37 @@ import { sessionLabels, siteConfig } from "../site-config";
     {courseMeta.tags.map((tag) => <li>{tag}</li>)}
   </ul>
 
-  <!-- STARTER_CONTENT: replace the authored page below, then remove this comment. -->
   <h2>What you will do</h2>
   <p>
-    Say what a student spends their time on — the making, reading, arguing or
-    measuring that fills the weeks. Name the artefact they walk out with.
+    Each week you get a deprecation notice for one real industry: the pitch
+    for replacing it with AI, written the way that pitch is actually sold,
+    followed by an audit of what the pitch leaves out. You read both halves,
+    then write your own — a Weekly Audit Log entry naming one claim you can
+    check, an original notice for an industry of your choosing, and, at the
+    end of semester, a case defending or blocking a notice you didn't write
+    in front of a review board.
   </p>
 
   <h2>Who it is for</h2>
   <p>
-    Say who this is aimed at and what they need to already know. Be specific
-    enough that someone can rule themselves in or out without emailing you.
+    Anyone who expects to be on the receiving end of an AI-replacement pitch
+    at work, rather than writing one — or who wants to be able to tell the
+    difference between a pitch's confident numbers and what they actually
+    support. No AI or ML background is assumed; what's assumed is a
+    willingness to read a persuasive paragraph twice.
+  </p>
+
+  <h2>How to read this course</h2>
+  <p>
+    Every lecture is written in two registers on purpose. The pitch and
+    migration path are written the way the AI-consultancy pitch they
+    describe was actually sold — confident, and light on cost. The breaking
+    changes section is never written that way: it's the plain, checked half
+    of the page, and it's where the cost the pitch left out actually shows
+    up. If a page reads as overconfident, that's deliberate up to the point
+    "Breaking changes" starts — past that seam, it's meant to read as plain
+    fact-checking. The full version of this is on the
+    <a href={withBase("/policies/")}>policies page</a>.
   </p>
 
   <h2>Where to go next</h2>
