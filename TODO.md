@@ -11,11 +11,16 @@ assessment split, the "frame" decision).
       sum to 100, weeks 1-12 present once, industry unique, >=1 deck)
 - [x] CLAUDE.md: voice-boundary rule, structural-escalation rule,
       no-fabricated-photography rule, spec-as-decided rule
-- [ ] Vertical slice: Week 1 (lecture+audit+real deck) and Week 9
+- [x] Vertical slice: Week 1 (lecture+audit+real deck) and Week 9
       (lecture+audit) fully built and pnpm check green
-- [ ] Remaining weeks 2-8, 10-12 (lecture+audit each)
-- [ ] Assessments: weekly-audit-log (20), file-your-own-notice (35),
-      sunset-review-board (45)
+- [x] Remaining weeks 2-8, 10-12 (lecture+audit each) -- written alongside the
+      vertical slice rather than after it: the lectures schema validates the
+      whole collection at once, so a build can't go green with only 2 of 12
+      weeks filled in. See .process-log.md.
+- [x] Assessments: weekly-audit-log (20), file-your-own-notice (35),
+      sunset-review-board (45) -- also forced earlier than planned, since the
+      course-graph integration hard-fails the build on a dangling `related`
+      reference (sessions already pointed at these slugs)
 - [ ] People: text-only bios, remove placeholder photos
 - [ ] Policies page + home page "How to read this course" frame section
 - [ ] Voice pass: lectures/sessions/assessments/people index pages, 404,
