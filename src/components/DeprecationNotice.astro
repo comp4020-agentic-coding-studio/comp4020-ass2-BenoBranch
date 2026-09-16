@@ -1,0 +1,160 @@
+---
+// Renders the four-part notice structure directly from a lecture's
+// frontmatter, not its markdown body. The pitch and migration path get the
+// confident, well-produced treatment a real vendor deck would use; breaking
+// changes sit in a deliberately flat, undecorated block labelled as the
+// plain half. Same layout every week -- see CLAUDE.md's voice-boundary rule.
+interface Props {
+  industry: string;
+  pitch: string;
+  migrationPath: string;
+  breakingChanges: { economic: string; functional: string };
+  rollbackPlan: string;
+}
+
+const { industry, pitch, migrationPath, breakingChanges, rollbackPlan } = Astro.props;
+---
+
+<section class="notice" aria-label={`Deprecation notice: ${industry}`}>
+  <header class="notice-stamp">
+    <span class="notice-stamp-label">Deprecation notice</span>
+    <span class="notice-stamp-industry">{industry}</span>
+    <span class="notice-stamp-status">Status: deprecated</span>
+  </header>
+
+  <div class="notice-pitch">
+    <h2>The pitch</h2>
+    <p>{pitch}</p>
+    <h3>Migration path</h3>
+    <p>{migrationPath}</p>
+  </div>
+
+  <div class="notice-breaking">
+    <h2>Breaking changes</h2>
+    <p class="notice-breaking-note">
+      The unsatirized part. What the migration actually costs, plainly.
+    </p>
+    <dl>
+      <dt>Economic</dt>
+      <dd>{breakingChanges.economic}</dd>
+      <dt>Functional</dt>
+      <dd>{breakingChanges.functional}</dd>
+    </dl>
+  </div>
+
+  <div class="notice-rollback">
+    <h2>Rollback plan</h2>
+    <p>{rollbackPlan}</p>
+  </div>
+</section>
+
+<style>
+  .notice {
+    display: grid;
+    gap: var(--at-spacing-lg);
+    margin-block: var(--at-spacing-xl);
+  }
+
+  .notice-stamp {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--at-spacing-sm) var(--at-spacing-md);
+    padding: var(--at-spacing-md) var(--at-spacing-lg);
+    border: 2px solid var(--at-primary);
+    border-radius: var(--at-border-radius);
+    font-family: var(--at-font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: var(--at-font-size-sm);
+  }
+
+  .notice-stamp-label {
+    font-weight: 700;
+    color: var(--at-primary);
+  }
+
+  .notice-stamp-industry {
+    font-weight: 600;
+    margin-inline-end: auto;
+    text-transform: none;
+    letter-spacing: normal;
+    font-family: var(--at-font-body);
+    font-size: var(--at-font-size-base);
+  }
+
+  .notice-stamp-status {
+    font-size: var(--at-font-size-xs);
+    color: var(--at-error);
+    border: 1px solid var(--at-error);
+    padding: 0.125rem 0.5rem;
+    border-radius: var(--at-border-radius);
+  }
+
+  .notice-pitch {
+    padding: var(--at-spacing-lg);
+    background: var(--at-accent-soft);
+    border-inline-start: 4px solid var(--at-accent);
+    border-radius: var(--at-border-radius);
+  }
+
+  .notice-pitch h2,
+  .notice-pitch h3 {
+    margin-block-start: 0;
+  }
+
+  .notice-pitch p {
+    font-size: 1.05em;
+  }
+
+  .notice-pitch > :last-child {
+    margin-block-end: 0;
+  }
+
+  .notice-breaking {
+    padding: var(--at-spacing-lg);
+    background: var(--at-bg-alt);
+    border: 1px solid var(--at-divider);
+    border-radius: var(--at-border-radius);
+  }
+
+  .notice-breaking h2 {
+    margin-block-start: 0;
+  }
+
+  .notice-breaking-note {
+    font-size: var(--at-font-size-sm);
+    color: var(--at-text-muted);
+  }
+
+  .notice-breaking dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--at-spacing-sm) var(--at-spacing-lg);
+    margin: 0;
+  }
+
+  .notice-breaking dt {
+    font-weight: 600;
+  }
+
+  .notice-breaking dd {
+    margin: 0;
+  }
+
+  .notice-rollback {
+    padding-inline-start: var(--at-spacing-lg);
+    border-inline-start: 2px solid var(--at-divider);
+  }
+
+  .notice-rollback h2 {
+    font-size: var(--at-font-size-h4);
+    margin-block-start: 0;
+  }
+
+  @media (width < 640px) {
+    .notice-breaking dl {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
