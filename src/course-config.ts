@@ -40,23 +40,24 @@ export const slopCourseMetaSchema = z
 
 // The single source of truth for the course record. The generated homepage,
 // navigation label and /api/index.json all read this object.
-// Replace every placeholder value, but keep the shape: the catalogue ingests
-// this API contract when the course is published.
 //
-// The code's last three digits were assigned to this repo when it was
-// provisioned, and no other course in the cohort has them. Change the first
-// digit to your course's level (and `level` to match); keep the other three.
-// STARTER_CONTENT: replace this course record, then remove this comment.
+// Level 4: this is a capstone-facing course, aimed at students about to
+// graduate into jobs where they'll be the one greenlighting (or pitching) an
+// automation strategy, not just reading about one. The code's last three
+// digits (632) were assigned when this repo was provisioned; only the level
+// digit changed.
 export const courseMeta = slopCourseMetaSchema.parse({
-  code: "SLOP1632",
-  title: "Course Title Goes Here",
+  code: "SLOP4632",
+  title: "Deprecation Notice",
   session: "Semester 1",
   year: 2027,
-  level: 1,
+  level: 4,
   startDate: "2027-02-22",
   endDate: "2027-05-28",
   description:
-    "One concise paragraph explaining what this course is, who it is for, " +
-    "and why somebody would choose to spend a semester taking it.",
-  tags: ["replace me"],
+    "Twelve industries, twelve deprecation notices: the pitch for replacing " +
+    "each with AI, written in the confident voice that pitch is sold in, " +
+    "then the audit of what it leaves out — the cost, and the capability " +
+    "that doesn't survive the migration.",
+  tags: ["automation policy", "critical writing", "case studies"],
 }) satisfies CourseMetaInput;
