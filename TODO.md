@@ -28,6 +28,9 @@ assessment split, the "frame" decision).
       site-config were already real copy from earlier commits;
       index.astro heroImageAlt deferred to the artwork step below since
       it describes specific imagery that doesn't exist yet
-- [ ] Artwork: generate hero-home.avif (2560x1086) + card.png (1200x630)
+- [x] Artwork: generate hero-home.avif (2560x1086) + card.png (1200x630)
       via SVG->sharp script
-- [ ] Final pnpm check + pnpm check:evidence pass
+- [ ] Final pnpm check + pnpm check:evidence pass -- evidence gate now only
+      fails on PROCESS.md, which is the one remaining item
+- [ ] PROCESS.md: write the 400-600 word account, cite real commit hashes,
+      remove the TEMPLATE: comment
