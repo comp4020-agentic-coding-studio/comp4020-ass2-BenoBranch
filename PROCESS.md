@@ -1,15 +1,5 @@
 # Process overview
 
-Written by you, for a reader: how you got from the brief to the harness and
-agentic workflow behind this submission. Markers read this file and follow its
-citations; they don't trawl the repo for evidence you didn't point at.
-
-This file is the shape; the course site's
-[assessment page](https://comp.anu.edu.au/courses/comp4020-agentic-coding-studio/topics/assessment/#what-you-submit)
-is the requirement, and its
-[word counts](https://comp.anu.edu.au/courses/comp4020-agentic-coding-studio/topics/assessment/#word-counts)
-cover every deliverable.
-
 ## What I built
 
 **SLOP4632: Deprecation Notice** — a 4000-level capstone course where every
@@ -47,7 +37,7 @@ plainly in `.process-log.md` instead of quietly merging plan steps. The same
 pass hit a second build-only discovery — a course-graph integration
 hard-fails on a dangling `related` reference, separately from the schema —
 which forced the three assessments to be built earlier than planned
-([`52365df`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BenoBranch/commit/52365df)...[`fb3ee41`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BenoBranch/commit/fb3ee41)).
+([`6b2bc04...fb3ee41`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BenoBranch/compare/22f5cdc...fb3ee41)).
 
 Before that whole pass was committed, `advisor()` caught that it was about to
 become the single "wrote the whole course" blob commit the plan's own
@@ -59,13 +49,3 @@ photography, [`eae3ada`](https://github.com/comp4020-agentic-coding-studio/comp4
 SVG→sharp deprecation-stamp motif in the site's actual gold/black brand
 palette, [`57cecf1`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BenoBranch/commit/57cecf1)) — both stayed image-free of anything
 resembling a real photograph, on the same rule.
-
-## Before you ship
-
-`pnpm check:evidence` verifies that this comment is gone, that your citations
-resolve to real commits, that a crit week's reflection entry is in
-`reflections/`, and that your `CLAUDE.md` is there. It checks that your account
-is traceable, not that it is good: that is the marker's call.
-
-Images aren't checked: unlike a citation whose SHA doesn't resolve, a broken
-image is visible the moment this file is rendered on GitHub.
