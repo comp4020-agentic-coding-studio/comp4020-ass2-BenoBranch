@@ -2,50 +2,68 @@
 
 ## What I built
 
-**SLOP4632: Deprecation Notice** — a 4000-level capstone course where every
-lecture is a formal software-style deprecation notice for one real industry
-being pitched for AI replacement. Each notice is written in two deliberate
-registers: the sunset rationale and migration path in the confident,
-overconfident voice the real pitch is sold in, and the breaking-changes and
-rollback-plan sections in the plain, checked voice of an audit. Twelve
-industries escalate from clerical work to care and creative labour to a
-capstone that turns the format on the course's own method; assessment moves
-the same way, from a weekly log of one checkable claim, to a notice students
-write themselves, to a live review board where they defend or block a
-classmate's notice with evidence.
+SLOP4632: Deprecation Notice is a 4000-level capstone course. Every lecture
+is a formal, software-style deprecation notice for one real industry
+currently being pitched for AI replacement. Each notice keeps two voices
+apart: the pitch and migration path read like the actual sales case, while
+breaking changes and the rollback plan are plain, checked, and never
+satirical. Twelve industries escalate across the semester, from clerical and
+mechanical work early on to care and creative labour later, ending with a
+week that turns the format on the course's own method. Assessment tracks
+that arc: a weekly log naming one checkable claim, an original notice
+students write themselves, and a closing review board where they defend or
+block a classmate's notice with evidence, not opinion.
 
 ## How I got here
 
-The topic came from combining two ideas I liked — deprecating things, and a
-"Calling Bullshit"-style stance toward AI hype — into the notice format
-itself. Before writing any content I called `advisor()` on the plan; it
-flagged a real risk: a marker skimming two non-adjacent weeks in ten minutes
-can't tell deliberate satirical register from unsupervised slop unless the
-site names the device somewhere straight. That became "the frame" — a plain
-policies-page statement and a home-page section — as a load-bearing design
-decision, not decoration ([`7407a1b`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BenoBranch/commit/7407a1b)).
+Before writing any content, I called `advisor()` on the plan. It flagged
+something I hadn't accounted for: a marker skimming two non-adjacent weeks in
+ten minutes has no way to tell deliberate satirical register from
+unsupervised slop, unless the site says so somewhere straight. That became
+"the frame", a plain statement on the policies page and a home-page section, built as load-bearing, not decoration
+([`7407a1b`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BenoBranch/commit/7407a1b)).
 
-I put the four-part notice shape into the `lectures` Zod schema rather than a
-spec test, deliberately committing it red before any content existed
-([`207da84`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BenoBranch/commit/207da84)) — a week literally cannot ship half-audited.
-Building the planned non-adjacent vertical slice (week 1 and week 9) surfaced
-something the plan hadn't accounted for: Astro validates a whole content
-collection at sync time, not per file, so two complete weeks out of twelve can
-never produce a green `pnpm check` on their own. Rather than stub the other
-ten with disposable filler, I wrote all twelve in one pass and said so
-plainly in `.process-log.md` instead of quietly merging plan steps. The same
-pass hit a second build-only discovery — a course-graph integration
-hard-fails on a dangling `related` reference, separately from the schema —
-which forced the three assessments to be built earlier than planned
+I put the four-part notice shape into the `lectures` Zod schema, not a spec
+test, and committed it red before any content existed
+([`207da84`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BenoBranch/commit/207da84))
+, a week literally can't ship half-audited. A planned two-week vertical
+slice (weeks 1 and 9) surfaced something the plan hadn't: Astro validates a
+whole content collection at sync time, not per file, so two finished weeks
+out of twelve can never produce a green `pnpm check` alone. Rather than stub
+the other ten, I wrote all twelve in one pass, which also meant building the
+three real assessments early, once a dangling `related` reference in the
+session files hard-failed the build
 ([`6b2bc04...fb3ee41`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BenoBranch/compare/22f5cdc...fb3ee41)).
+Before committing, `advisor()` caught that this was about to land as one
+"wrote the whole course" commit, against the plan's own sequencing rule; I
+split it into five along the decision lines above instead.
 
-Before that whole pass was committed, `advisor()` caught that it was about to
-become the single "wrote the whole course" blob commit the plan's own
-sequencing section had warned against; I split it into five commits along
-the decision lines already narrated in the process log instead.
+One thing I left deliberately uncoded: whether a week's `breakingChanges`
+says anything beyond restating its `pitch`, the course's actual bet.
+`spec/README.md` already says human-judgement lines belong to the crit, and
+a length or similarity threshold here would be theatre standing in for a
+reader's judgement. I checked the escalation claim instead of asserting it:
+a script comparing each week's `breakingChanges` word count against its
+`pitch` showed the ratio climbing from 2.43 at week 1 to 4.69 at week 8, with
+rollback plans roughly doubling in length by weeks 10–12
+([`9eb33ca`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BenoBranch/commit/9eb33ca)).
 
-The two remaining pieces — people's text-only bios (no fabricated
-photography, [`eae3ada`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BenoBranch/commit/eae3ada)) and the hero/card artwork (an
-SVG→sharp deprecation-stamp motif in the site's actual gold/black brand
-palette, [`57cecf1`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BenoBranch/commit/57cecf1)) — both stayed image-free of anything
-resembling a real photograph, on the same rule.
+With every item shipped, reading harsh Assignment 1 feedback (process 80,
+artefact 60 for being janky on mobile, response 70) made restarting the
+harness look like the safer move. I checked first: A1's `CLAUDE.md` history
+showed two commits over the unmodified starter file, matching the marker's
+own comment; this repo already carried four course-specific rules written
+before any content existed
+([`22f5cdc`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BenoBranch/commit/22f5cdc)).
+A second `advisor()` pass pushed back, I'd only checked the process side,
+not the two things A1 scored lower on. So I screenshotted four pages at
+390×844 to check for the mobile crowding A1 was marked down for, and
+confirmed the repo was still private with CI unrun, rather than let the more
+comfortable half of the evidence stand alone.
+
+Two image decisions came from the same rule: staff bios stayed text-only
+rather than generate headshots, and the hero and card art are programmatic
+SVG rasterised with Sharp in the site's own gold-and-black palette instead of
+a stock photo, no fabricated photography anywhere on the site
+([`eae3ada`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BenoBranch/commit/eae3ada),
+[`57cecf1`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BenoBranch/commit/57cecf1)).
