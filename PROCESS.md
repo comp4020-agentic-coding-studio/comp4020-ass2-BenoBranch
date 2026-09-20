@@ -26,7 +26,7 @@ unsupervised slop, unless the site says so somewhere straight. That became
 I put the four-part notice shape into the `lectures` Zod schema, not a spec
 test, and committed it red before any content existed
 ([`207da84`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BenoBranch/commit/207da84))
-, a week literally can't ship half-audited. A planned two-week vertical
+— a week literally can't ship half-audited. A planned two-week vertical
 slice (weeks 1 and 9) surfaced something the plan hadn't: Astro validates a
 whole content collection at sync time, not per file, so two finished weeks
 out of twelve can never produce a green `pnpm check` alone. Rather than stub
@@ -39,11 +39,11 @@ Before committing, `advisor()` caught that this was about to land as one
 split it into five along the decision lines above instead.
 
 One thing I left deliberately uncoded: whether a week's `breakingChanges`
-says anything beyond restating its `pitch`, the course's actual bet.
-`spec/README.md` already says human-judgement lines belong to the crit, and
-a length or similarity threshold here would be theatre standing in for a
-reader's judgement. I checked the escalation claim instead of asserting it:
-a script comparing each week's `breakingChanges` word count against its
+says anything beyond restating its `pitch`. `spec/README.md` already says
+human-judgement lines belong to the crit, and a length or similarity
+threshold would be theatre standing in for a reader's judgement. The
+escalation claim is separate, though, and I checked it rather than asserting
+it: a script comparing each week's `breakingChanges` word count against its
 `pitch` showed the ratio climbing from 2.43 at week 1 to 4.69 at week 8, with
 rollback plans roughly doubling in length by weeks 10–12
 ([`9eb33ca`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BenoBranch/commit/9eb33ca)).
@@ -55,7 +55,7 @@ showed two commits over the unmodified starter file, matching the marker's
 own comment; this repo already carried four course-specific rules written
 before any content existed
 ([`22f5cdc`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BenoBranch/commit/22f5cdc)).
-A second `advisor()` pass pushed back, I'd only checked the process side,
+A second `advisor()` pass pushed back: I'd only checked the process side,
 not the two things A1 scored lower on. So I screenshotted four pages at
 390×844 to check for the mobile crowding A1 was marked down for, and
 confirmed the repo was still private with CI unrun, rather than let the more

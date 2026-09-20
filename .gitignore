@@ -29,3 +29,6 @@ mise.local.toml
 
 # raw working notes for PROCESS.md, not evidence itself
 .process-log.md
+
+# personal pre-ship checklist, not evidence itself
+SUBMISSION-CHECKLIST.md
